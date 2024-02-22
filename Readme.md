@@ -53,14 +53,37 @@ fun main() {
 fun welcomeUser(message: String) = "Hello, $message"
 ```
 
+**COLLECTIONS**
 ```kotlin
-
+fun collections() {
+    println("========== Collections ============")
+    val hobbits = listOf("Frodo", "Sam", "Pippin", "Merry")   // List.of() in Java, since version 9
+    println("List: $hobbits")
+    val uniqueHobbits = setOf("Frodo", "Sam", "Pippin", "Merry", "Frodo")  // Set.of() in Java, since version 9
+    println("Set: $uniqueHobbits")
+    val movieBatmans = mapOf(                      // Map.of() and Map.ofEntries() in Java, since version 9
+        "Batman Returns" to "Michael Keaton",
+        "Batman Forever" to "Val Kilmer",
+        "Batman & Robin" to "George Clooney"
+    )
+    println(movieBatmans)
+}
 ```
 
 ```kotlin
+fun mutableCollections() {
+    println("========== Mutable Collections ============")
+    val editableHobbits = mutableListOf(
+        "Frodo", "Sam",
+        "Pippin", "Merry"
+    )
+    editableHobbits.add("Bilbo")
+    println(editableHobbits)
+}
 ```
 
 ```kotlin
+
 ```
 
 ```kotlin
