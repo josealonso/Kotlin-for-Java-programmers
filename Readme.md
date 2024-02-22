@@ -82,10 +82,32 @@ fun mutableCollections() {
 }
 ```
 
-```kotlin
+**IF in Kotlin**
 
+```kotlin
+/* if is a statement here, like in Java */
+fun getUnixSocketPollingAsIfItWereJava(isBsd: Boolean): String {
+        var pollingType = "ePoll"
+        if (isBsd) {
+            pollingType = "kqueue"
+        }
+        return pollingType
+}
 ```
 
 ```kotlin
+/* if is an expression here */
+fun getUnixSocketPolling(isBsd: Boolean): String {
+        return if (isBsd) {
+            "kqueue"
+        } else {
+            "epoll"
+        }
+}
+```
+
+```kotlin
+/* if expression in only one line */
+fun getUnixSocketPollingInOneLine(isBsd: Boolean) = if (isBsd) "kqueue" else "epoll"
 ```
 
