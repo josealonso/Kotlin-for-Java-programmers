@@ -126,3 +126,21 @@ fun getUnixSocketPolling(isBsd: Boolean): String {
 fun getUnixSocketPollingInOneLine(isBsd: Boolean) = if (isBsd) "kqueue" else "epoll"
 ```
 
+**Pattern Matching**
+```kotlin
+interface Expr
+class Num(val value: Int) : Expr    // ":" is equivalent to Java "implements"
+class Sum(val left: Expr, val right: Expr) : Expr
+```
+
+```kotlin
+/*
+ Using "when" instead of if/else
+*/
+fun eval(e :Expr): Int =
+    when(e) {
+        is Num -> e.value
+        is Sum -> eval(e.right) + eval(e.left)
+        else -> throw IllegalArgumentException("Non-valid expression")
+    }
+```
