@@ -24,6 +24,13 @@ fun sumTwoNumbers(firstNumber: Int, secondNumber: Int): Int {
 }
 ```
 
+```kotlin
+/*
+ Assignments are NOT expressions in Kotlin
+*/
+var n = m = getNumber()     // Compile error
+```
+
 **String interpolation**
 ```kotlin
 fun greetUser() {
@@ -43,7 +50,7 @@ fun comparisonAndEquality() {
 }
 ```
 
-
+** Functions**
 ```kotlin
 fun welcomeUser(message: String) {   // the function parameter can't be modified
     return "Hello, $message"
