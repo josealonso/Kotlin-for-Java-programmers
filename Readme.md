@@ -24,6 +24,14 @@ fun sumTwoNumbers(firstNumber: Int, secondNumber: Int): Int {
 }
 ```
 
+**String interpolation**
+```kotlin
+fun greetUser() {
+    val name = readln()
+    println("Hello, ${if (name.isBlank()) "someone" else name}!")   // An expression is evaluated insude the argument to println
+}
+```
+
 ```kotlin
 fun comparisonAndEquality() {
     val num1 = 1000
