@@ -186,3 +186,18 @@ println("New Person: $onePerson")  // New Person: learningkotlin.examples.Person
 println("New age: ${onePerson.age}")  // New age: 47
 ```
 
+**Custom setter**
+
+```kotlin
+/*
+ Custom setter
+ - The property must be inside the class body.
+ - Common use case: having a mutable property with some validations
+ */
+class Person(val name: String, var age: Int) {
+    var dateOfBirth: Int = 1970
+        set(value) {
+            field = if (value >= 1970) value else 1970
+        }
+}
+```
