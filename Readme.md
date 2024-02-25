@@ -230,3 +230,24 @@ class Button : Clickable {
     override fun click() = println("Button was clicked")
 }
 ```
+
+**Data classes**
+
+```kotlin
+/*
+ equals, toString and hashCode functions are generated automatically.
+*/
+**data** class Person(val name: String, var age: Int)
+```
+
+Similar to Java records
+
+```java
+public record Person(String name, Integer age) {}
+```
+
+Differences
+- Kotlin data classes also generates a copy() function.
+- In a record, all properties must be final.
+- The data classes can inherit from other classes, while records don't allow that.
+  
