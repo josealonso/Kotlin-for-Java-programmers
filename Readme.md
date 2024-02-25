@@ -257,4 +257,12 @@ Differences
 - Kotlin data classes also generates a copy() function.
 - In a record, all properties must be final.
 - The data classes can inherit from other classes, while records don't allow that.
-  
+
+```kotlin
+/* 
+ Access a data class from Java 
+*/
+@JvmRecord    // Using @JvmRecord annotation on data classes for interoperability.
+data class Person(val name: String, var age: Int)
+```
+
