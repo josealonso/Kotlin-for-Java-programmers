@@ -170,3 +170,19 @@ for (i in 0 until 6) {
 }
 ```
 
+**C L A S S E S**
+
+```kotlin
+class Person(val name: String, var age: Int)
+/*
+ There is no "new" keyword in Kotlin.
+ Kotlin will generate a getter method for each attribute.
+ And for mutable attributes also a setter method.
+*/
+val onePerson = Person("José", 24)
+println("New Person: $onePerson")  // New Person: learningkotlin.examples.Person@17f052a3
+onePerson.age = 47
+println("New Person: $onePerson")  // New Person: learningkotlin.examples.Person@17f052a3
+println("New age: ${onePerson.age}")  // New age: 47
+```
+
