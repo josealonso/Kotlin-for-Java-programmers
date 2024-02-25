@@ -205,3 +205,28 @@ class Person(val name: String, var age: Int) {
 
 }
 ```
+
+**Inheritance**
+
+```kotlin
+/*
+ Kotlin classes are final by default
+*/
+open class Animal 
+class Dog: Animal()
+```
+
+```kotlin
+/*
+ Both interfaces and abstract members are always open, so the open modifier is not needed.
+*/
+interface Clickable {
+    fun click()
+}
+
+class Button : Clickable {
+    // The override modifier is mandatory
+    // The overridden member is open by default, if not marked final
+    override fun click() = println("Button was clicked")
+}
+```
