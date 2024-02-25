@@ -143,3 +143,30 @@ fun eval(e: Expr): Int =
     }
 ```
 
+**LOOPS**
+
+**for-each loop**
+```kotlin
+    val kotlinLovers = listOf("Juanjo", "Jose", "David")
+    for (j in kotlinLovers) {
+        println(j)
+    }
+```
+
+**for loop: the range operator**
+```kotlin
+/*
+ Descending, inclusive range
+*/
+for (i in 6 downTo 0) {
+    print("$i ")
+}
+
+/*
+ Exclusive range
+*/
+for (i in 0 until 6) {
+    print("$i ")
+}
+```
+
