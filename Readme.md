@@ -237,7 +237,7 @@ class Button : Clickable {
 /*
  equals, toString and hashCode functions are generated automatically.
 */
-**data** class Person(val name: String, var age: Int)
+data class Person(val name: String, var age: Int)
 ```
 
 Similar to Java records
