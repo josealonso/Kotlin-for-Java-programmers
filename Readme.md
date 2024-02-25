@@ -199,5 +199,9 @@ class Person(val name: String, var age: Int) {
         set(value) {
             field = if (value >= 1970) value else 1970
         }
+    /* Custom getter */
+    val nameInUpperCase = name
+        get() = field.uppercase()
+
 }
 ```
