@@ -163,6 +163,13 @@ for (i in 6 downTo 0) {
 }
 
 /*
+ Only even numbers
+*/
+for (i in 6 downTo 0 step 2) {
+  print("$i ")
+}
+
+/*
  Exclusive range
 */
 for (i in 0 until 6) {
