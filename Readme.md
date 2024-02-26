@@ -1,3 +1,8 @@
+Code examples for preparing the speech "Kotlin for Java programmers", given in the Madrid Java Users Group (JUG) in March 2024.
+The presentation has two different parts:
+- Introduction to Kotlin.
+- Advanced topics.
+
 ## Kotlin for Java programmers, introduction
 
 
