@@ -286,3 +286,29 @@ Differences
 data class Person(val name: String, var age: Int)
 ```
 
+**EXTENSION PROPERTY**
+```kotlin
+val String.lastChar22: Char
+    get() = this.get(length - 1)
+```
+
+**EXTENSION FUNCTION**
+```kotlin
+/***********************************************************************
+EXTENSION FUNCTIONS
+The String class is called a method receiver.
+Even though you may not even have the source code to that class,
+you can still extend it with the methods you need in your project.
+Unlike methods defined in the class, extension functions don’t have access
+to private or protected members of the class.
+Extension functions are effectively syntactic sugar over static method calls.
+Many extension functions are declared in the Kotlin standard library.
+***********************************************************************/
+fun String.lastChar(): Char = get(this.length - 1)
+```
+
+```kotlin
+val text = "kotlin"
+println("Property: ${text.lastChar22}")
+println("Function: ${text.lastChar()}")
+```
