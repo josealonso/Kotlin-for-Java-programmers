@@ -29,3 +29,35 @@ for ((index, elem) in customers.withIndex()) {  // No need to think about the in
     println("$index: $elem")
 }
 ```
+
+### The Singleton Pattern
+
+```java
+public final class Connection {
+
+    private static Connection INSTANCE;
+    private String name = "my database";
+    private Connection() { }
+
+    public static Connection getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new Connection();
+        }
+        
+        return INSTANCE;
+    }
+}
+```
+
+```kotlin
+/* Singleton pattern */
+object Connection {
+    val name: String = "my database"
+}
+
+fun main() {
+    println("Only one object ?: ${connection === connection2}")         // true
+    println("Only one name?: ${connection.name === connection2.name}")  // true
+}
+```
+
