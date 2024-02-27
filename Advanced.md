@@ -1,5 +1,6 @@
 ## Kotlin advanced topics and comparison with Java
 
+### Reading a nullable list 
 ```java
 /*
     This is a common task in Java.
