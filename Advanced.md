@@ -148,3 +148,23 @@ class User private constructor(val id: Long, val name: String) {
 val jose = User.newInstance("José")
 ```
 
+### Builder Pattern
+
+```kotlin
+/*
+ Default values and named arguments make the builder pattern not needed
+ */
+data class Programmer(
+    // All optional fields must be initialized
+    val name: String = "programmer",
+    val lastName: String? = null,
+    val preferredLanguage: String = "Kotlin"
+)
+```
+
+```kotlin
+val jose = Programmer(lastName = "Alonso", name = "José Ramón")
+val juan = Programmer()
+println(jose)  // Programmer(name=José Ramón, lastName=Alonso, preferredLanguage=Kotlin)
+println(juan)  // Programmer(name=programmer, lastName=null, preferredLanguage=Kotlin)
+```
