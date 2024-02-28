@@ -97,6 +97,7 @@ class Utils {
     }
 }
 ```
+
 ```Kotlin
 Utils.calculateInterests(Instant.now())
 ```
@@ -130,3 +131,20 @@ class Utils {
 Utils.calculateInterests(Instant.now());
 var magicWord = Utils.magicWord;
 ```
+
+### Static Factory methods
+
+```kotlin
+class User private constructor(val id: Long, val name: String) {
+    // Consistency of the next id generation is guaranteed because a companion object is a singleton.
+    companion object {
+        private var currentId = 0L;
+        fun newInstance(name: String) = User(currentId++, name)
+    }
+}
+```
+
+```kotlin
+val jose = User.newInstance("José")
+```
+
