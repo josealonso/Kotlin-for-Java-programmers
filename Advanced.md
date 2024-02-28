@@ -168,3 +168,22 @@ val juan = Programmer()
 println(jose)  // Programmer(name=José Ramón, lastName=Alonso, preferredLanguage=Kotlin)
 println(juan)  // Programmer(name=programmer, lastName=null, preferredLanguage=Kotlin)
 ```
+
+### Java Streams and its equivalent in Kotlin
+
+```java
+var numbers = List.of(1, 2, 3, 4, 5, 6);
+numbers.stream()
+    .filter(n -> n % 2 == 0)
+    .forEach(System.out::println);
+```
+
+```kotlin
+/*
+ Conversion to streams is not needed.
+ The standard collections have many methods.
+*/
+listOf(1, 2, 3, 4, 5, 6)
+    .filter { it % 2 == 0 }
+    .forEach { println(it) }
+```
