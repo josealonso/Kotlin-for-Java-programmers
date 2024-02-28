@@ -82,3 +82,45 @@ object Connection2 {
     val name: String = "my database"
 }
 ```
+
+### Utility class
+
+```kotlin
+class Utils {
+    companion object {  // Each class can have only one companion object
+
+        fun calculateInterests(date: Instant): Int {
+            .....................
+            return 23
+        }
+        // other functions
+    }
+}
+```
+```Kotlin
+Utils.calculateInterests(Instant.now())
+```
+
+```java
+Utils.Companion.calculateInterests(Instant.now());
+```
+
+**Accessing Kotlin companion object from Java**
+
+```Kotlin
+class Utils {
+    companion object {
+
+        // This annotation tells Java classes to treat this method as if it was static.
+        @JvmStatic
+        fun calculateInterests(date: Instant): Int {
+            .....................
+            return 23
+        }
+    }
+}
+```
+
+```java
+Utils.calculateInterests(Instant.now());
+```
