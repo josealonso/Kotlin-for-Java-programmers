@@ -51,13 +51,34 @@ public final class Connection {
 
 ```kotlin
 /* Singleton pattern */
-object Connection {
+object Connection2 {
     val name: String = "my database"
 }
 
 fun main() {
+    val connection = Connection2
+    val connection2 = Connection2
     println("Only one object ?: ${connection === connection2}")         // true
     println("Only one name?: ${connection.name === connection2.name}")  // true
 }
 ```
 
+**Accessing Kotlin object from Java**
+
+```java
+/*
+  Access the Kotlin singleton from Java
+*/
+var name = Connection2.INSTANCE.getName(); // only way if Kotlin code is not annotated
+var name2 = Connection2.getName();         // only possible if Kotlin code is annotated
+System.out.println(name);  // my database
+System.out.println(name2); // my database
+```
+
+```kotlin
+/* Singleton pattern */
+object Connection2 {
+    @JvmStatic  // static getter and setter methods are generated
+    val name: String = "my database"
+}
+```
