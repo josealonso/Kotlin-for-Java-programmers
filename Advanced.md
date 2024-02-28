@@ -109,6 +109,8 @@ Utils.Companion.calculateInterests(Instant.now());
 
 ```Kotlin
 class Utils {
+
+    // A companion object is an instance of a real class called "Companion"
     companion object {
 
         @JvmField
