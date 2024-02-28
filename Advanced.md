@@ -111,6 +111,9 @@ Utils.Companion.calculateInterests(Instant.now());
 class Utils {
     companion object {
 
+        @JvmField
+        val magicWord = "PLEASE"
+
         // This annotation tells Java classes to treat this method as if it was static.
         @JvmStatic
         fun calculateInterests(date: Instant): Int {
@@ -123,4 +126,5 @@ class Utils {
 
 ```java
 Utils.calculateInterests(Instant.now());
+var magicWord = Utils.magicWord;
 ```
