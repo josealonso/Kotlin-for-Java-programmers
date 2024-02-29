@@ -61,8 +61,6 @@ println(filesSize)
 
 ### Functions returning a value or null﻿
 
-```kotlin
-
 ```java
 // In Java, you need to be careful when working with list elements.
 // You should always check whether an element exists at an index before you attempt to use the element.
@@ -74,6 +72,7 @@ System.out.println(numbers.get(0));
 numbers.get(5) // Exception!
 ```
 
+```kotlin
 /*
  The Kotlin standard library often provides functions whose names indicate whether they can possibly return a null value.
  This is especially common in the collections API:
