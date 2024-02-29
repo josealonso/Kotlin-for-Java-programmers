@@ -30,7 +30,7 @@ for ((index, elem) in customers.withIndex()) {  // No need to think about the in
 }
 ```
 
-### If-not-null shorthand﻿
+### If-not-null shorthand﻿ or the safe-call operator 
 
 ```kotlin
 val files = File("Test").listFiles()
