@@ -69,6 +69,16 @@ fun main() {
 ```
 
 ```kotlin
+/*
+ A function that returns no meaningful value.
+ "Unit" return type can be omitted. It is equivalent to "void" in Java.
+*/
+fun printSum(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a + b}")
+}
+```
+
+```kotlin
 /* A function as an expression */
 fun welcomeUser(message: String) = "Hello, $message"
 ```
