@@ -186,6 +186,21 @@ var programmer = new Programmer.Builder("Juan")
         .build();
 ```
 
+```java
+/*
+ Using Lombok
+ */
+@Builder
+record Programmer(String name, String lastName, String preferredLanguage) { }
+.....................
+
+var programmer = new Programmer.builder()
+        .name("Juan")
+        .lastName("Pérez")
+        .preferredLanguage("Python")
+        .build();
+```
+
 Builder Pattern in Kotlin
 
 ```kotlin
