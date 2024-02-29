@@ -115,30 +115,31 @@ fun mutableCollections() {
 **IF in Kotlin**
 
 ```kotlin
-/* if is a statement here, like in Java */
-fun getUnixSocketPollingAsIfItWereJava(isBsd: Boolean): String {
-        var pollingType = "ePoll"
-        if (isBsd) {
-            pollingType = "kqueue"
-        }
-        return pollingType
+
+/* if can be a statement, like in Java */
+fun maxOf(a: Int, b: Int): Int {
+    if (a > b) {
+        return a
+    } else {
+        return b
+    }
 }
 ```
 
 ```kotlin
 /* if is an expression here */
-fun getUnixSocketPolling(isBsd: Boolean): String {
-        return if (isBsd) {
-            "kqueue"
-        } else {
-            "epoll"
-        }
+fun maxOf(a: Int, b: Int): Int {
+    return if (a > b) {
+        a
+    } else {
+        b
+    }
 }
 ```
 
 ```kotlin
 /* if expression in only one line */
-fun getUnixSocketPollingInOneLine(isBsd: Boolean) = if (isBsd) "kqueue" else "epoll"
+fun maxOf(a: Int, b: Int) = if (a > b) a else b
 ```
 
 **Pattern Matching**
