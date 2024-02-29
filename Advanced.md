@@ -240,3 +240,27 @@ listOf(1, 2, 3, 4, 5, 6)
     .filter { it % 2 == 0 }
     .forEach { println(it) }
 ```
+
+## B O N U S
+
+### Call multiple methods on an object instance (with)
+
+```kotlin
+class Programmer {
+    fun study(): Nothing = TODO()
+    fun iterationMeeting(minutes: Int): Nothing = TODO()
+    fun planningMeeting(minutes: Int): Nothing = TODO()
+    fun code(numOfLines: Int): Nothing = TODO()
+}
+
+val ninjaProgrammer = Programmer()
+with(ninjaProgrammer) { 
+    study()
+    for (i in 1..2) {
+        iterationMeeting(60)
+        planningMeeting(90)
+    }
+    code(50)
+}
+```
+
