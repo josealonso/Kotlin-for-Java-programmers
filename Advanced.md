@@ -264,3 +264,8 @@ with(ninjaProgrammer) {
 }
 ```
 
+### TODO
+
+Kotlin's standard library has a *TODO()* function that will always throw a *NotImplementedError*. 
+Its return type is Nothing so it can be used regardless of expected type. 
+There's also an overload that accepts a reason parameter.
