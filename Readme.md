@@ -142,6 +142,18 @@ fun maxOf(a: Int, b: Int): Int {
 fun maxOf(a: Int, b: Int) = if (a > b) a else b
 ```
 
+**when expression**
+```kotlin
+fun describe(obj: Any): String =  // what if the parameter is null?
+    when (obj) {
+        1          -> "One"
+        "Hello"    -> "Greeting"
+        is Long    -> "Long"
+        !is String -> "Not a string"
+        else       -> "Unknown"
+    }
+```
+
 **Pattern Matching**
 ```kotlin
 interface Expr
