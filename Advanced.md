@@ -150,6 +150,42 @@ val jose = User.newInstance("José")
 
 ### Builder Pattern
 
+```java
+public record Programmer(String name, String lastName, String preferredLanguage) {
+
+    // Builder
+    public static final class Builder {
+        String name;
+        String lastName;
+        String preferredLanguage;
+
+        public Builder(String name) {
+            this.name = name;
+        }
+        public Builder lastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+        public Builder preferredLanguage(String preferredLanguage) {
+            this.preferredLanguage = preferredLanguage;
+            return this;
+        }
+
+        public Programmer build() {
+            return new Programmer(name, lastName, preferredLanguage);
+        }
+    }
+}
+```
+
+Usage
+```java
+var programmer = new Programmer.Builder("Juan")
+        .lastName("Pérez")
+        .preferredLanguage("Python")
+        .build();
+```
+
 ```kotlin
 /*
  Default values and named arguments make the builder pattern not needed
