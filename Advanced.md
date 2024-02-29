@@ -59,6 +59,37 @@ val filesSize = files?.size ?: run {
 println(filesSize)
 ```
 
+### Functions returning a value or null﻿
+
+```kotlin
+
+```java
+// In Java, you need to be careful when working with list elements.
+// You should always check whether an element exists at an index before you attempt to use the element.
+var numbers = new ArrayList<Integer>();
+numbers.add(1);
+numbers.add(2);
+
+System.out.println(numbers.get(0));
+numbers.get(5) // Exception!
+```
+
+/*
+ The Kotlin standard library often provides functions whose names indicate whether they can possibly return a null value.
+ This is especially common in the collections API:
+*/
+fun nullInLists() {
+    val numbers = listOf(1, 2)
+    println(numbers[0])  // Can throw IndexOutOfBoundsException if the collection is empty
+    println(numbers.get(0))  // The indexing operator is preferred in Kotlin
+
+    numbers[5]     // Exception!
+
+    println(numbers.firstOrNull())
+    println(numbers.getOrNull(5)) // null
+}
+```
+
 ### The Singleton Pattern
 
 ```java
