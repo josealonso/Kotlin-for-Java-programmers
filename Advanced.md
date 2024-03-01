@@ -2,6 +2,8 @@
 
 ### Strings in Java and Kotlin
 
+**Build a string**
+
 ```java
 StringBuilder countDown = new StringBuilder();
 for (int i = 5; i > 0; i--) {
@@ -10,8 +12,32 @@ for (int i = 5; i > 0; i--) {
 }
 System.out.println(countDown);
 ```
-
 In Kotlin, use buildString() – an inline function that takes logic to construct a string as a lambda argument:
+
+**Create a string from collection items**
+
+```java
+// Java
+List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
+String invertedOddNumbers = numbers
+        .stream()
+        .filter(it -> it % 2 != 0)
+        .map(it -> -it)
+        .map(Object::toString)
+        .collect(Collectors.joining("; "));
+System.out.println(invertedOddNumbers);
+```
+
+```kotlin
+// Kotlin
+fun createStringFromCollectionItems() {
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+    val invertedOddNumbers = numbers
+        .filter { it % 2 != 0 }
+        .joinToString(separator = "; ", prefix = "== ", postfix = " ==") {"${-it}"}
+    println(invertedOddNumbers)   // == -1; -3; -5 ==
+}
+```
 
 ```kotlin
 // Kotlin
