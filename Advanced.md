@@ -48,7 +48,7 @@ if (files != null) {
     println("empty")
 }
 
-// Shortcut prvided by Kotlin
+// Shortcut provided by Kotlin
 println(files?.size ?: "empty") // if files is null, this prints "empty"
 
 // To calculate a more complicated fallback value in a code block, use `run`
@@ -57,6 +57,14 @@ val filesSize = files?.size ?: run {
     someSize * 2
 }
 println(filesSize)
+```
+
+**These two operators already existed in Groovy**
+
+```groovy
+def name = null
+def length = name?.length() ?: 0
+println length
 ```
 
 ### Functions returning a value or null﻿
