@@ -1,5 +1,31 @@
 ## Kotlin advanced topics and comparison with Java
 
+### Strings in Java and Kotlin
+
+```java
+StringBuilder countDown = new StringBuilder();
+for (int i = 5; i > 0; i--) {
+    countDown.append(i);
+    countDown.append("\n");
+}
+System.out.println(countDown);
+```
+
+In Kotlin, use buildString() – an inline function that takes logic to construct a string as a lambda argument:
+
+```kotlin
+// Kotlin
+val countDown = buildString {   // Under the hood, the buildString uses the same StringBuilder class as in Java
+    for (i in 5 downTo 1) {
+        append(i)
+        appendLine()
+    }
+}
+println(countDown)
+```
+
+
+
 ### Reading a nullable list 
 ```java
 /*
