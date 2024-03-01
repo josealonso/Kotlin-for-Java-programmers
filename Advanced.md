@@ -25,6 +25,20 @@ val countDown = buildString {   // Under the hood, the buildString uses the same
 println(countDown)
 ```
 
+**Take a substring﻿**
+```java
+// Java
+String input = "What is the best JVM language? Groovy";
+String answer = input.substring(input.indexOf("?") + 1);
+System.out.println(answer);
+```
+
+```kotlin
+val input = "What is the best JVM language? Kotlin hands down"
+val answer = input.substringAfter("?")  // or input.substringAfterLast("?")
+println(answer)
+```
+
 **Set default value if the string is blank﻿**
 
 ```java
