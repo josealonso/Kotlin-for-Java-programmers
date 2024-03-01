@@ -43,7 +43,20 @@ fun main() {
 }
 ```
 
+**Split a string**
+```java
+// Java
+System.out.println(Arrays.toString("Once.upon.a.time".split("\\.")));
+```
 
+```kotlin
+// Kotlin
+fun splitStr() {
+    var sentenceWithDelimiters = "Once.upon.a.time"
+    val words = sentenceWithDelimiters.split(".")
+    println(words)   // [Once, upon, a, time]
+}
+```
 
 
 **Create a string from collection items**
