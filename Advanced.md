@@ -25,6 +25,27 @@ val countDown = buildString {   // Under the hood, the buildString uses the same
 println(countDown)
 ```
 
+**Set default value if the string is blank﻿**
+
+```java
+// Java
+public void defaultValueIfStringIsBlank() {
+    String nameValue = getName();
+    String name = nameValue.isBlank() ? "MISSING NAME" : nameValue;
+    System.out.println(name);
+}
+```
+
+```kotlin
+fun main() {
+    val name = getName().ifBlank { "MISSING NAME" }
+    println(name)
+}
+```
+
+
+
+
 **Create a string from collection items**
 
 ```java
