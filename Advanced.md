@@ -72,6 +72,25 @@ fun splitStr() {
 }
 ```
 
+**Use multiline strings**
+```java
+// Java
+String result = """
+    Kotlin
+       Java
+    """;
+System.out.println(result);
+```
+The difference with Java is that Java automatically trims indents, and in Kotlin you should do it explicitly:
+
+```kotlin
+// Kotlin   
+val result = """
+        Kotlin
+           Java 
+    """.trimIndent()
+println(result)
+```
 
 **Create a string from collection items**
 
