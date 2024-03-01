@@ -14,6 +14,17 @@ System.out.println(countDown);
 ```
 In Kotlin, use buildString() – an inline function that takes logic to construct a string as a lambda argument:
 
+```kotlin
+// Kotlin
+val countDown = buildString {   // Under the hood, the buildString uses the same StringBuilder class as in Java
+    for (i in 5 downTo 1) {
+        append(i)
+        appendLine()
+    }
+}
+println(countDown)
+```
+
 **Create a string from collection items**
 
 ```java
@@ -38,19 +49,6 @@ fun createStringFromCollectionItems() {
     println(invertedOddNumbers)   // == -1; -3; -5 ==
 }
 ```
-
-```kotlin
-// Kotlin
-val countDown = buildString {   // Under the hood, the buildString uses the same StringBuilder class as in Java
-    for (i in 5 downTo 1) {
-        append(i)
-        appendLine()
-    }
-}
-println(countDown)
-```
-
-
 
 ### Reading a nullable list 
 ```java
