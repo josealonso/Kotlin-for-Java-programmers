@@ -57,7 +57,7 @@ fun comparisonAndEquality() {
 
 **Functions**
 ```kotlin
-fun welcomeUser(message: String) {   // the function parameter can't be modified
+fun welcomeUser(message: String): String {   // the function parameter can't be modified
     return "Hello, $message"
 }
 ```
