@@ -327,6 +327,36 @@ Differences
 data class Person(val name: String, var age: Int)
 ```
 
+**EXCEPTIONS**
+
+```kotlin
+    /*
+     In Java, you have to declare all the checked exceptions that your function can throw, and
+     they need to be handled explicitly.
+     In Kotlin, the compiler does not require you to handle exceptions and the "throws" clause does not exist.
+     */
+    fun readNumber(reader: BufferedReader) {
+        // "try" can be used as a statement or as an expression
+        val aNumber = try {
+            Integer.parseInt(reader.readLine())
+        } catch (e: NumberFormatException) {
+            return
+        } finally {
+            reader.close()
+        }
+
+        println(aNumber)
+    }
+```
+
+```kotlin
+    fun readNumberNoErrorHandling(reader: BufferedReader): Int {
+        val line = reader.readLine()
+        reader.close()
+        return Integer.parseInt(line)
+    }
+```
+
 **EXTENSION PROPERTY**
 ```kotlin
 val String.lastChar22: Char
