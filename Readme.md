@@ -350,6 +350,7 @@ data class Person(val name: String, var age: Int)
 ```
 
 ```kotlin
+    @Throws(NumberFormatException::class)
     fun readNumberNoErrorHandling(reader: BufferedReader): Int {
         val line = reader.readLine()
         reader.close()
